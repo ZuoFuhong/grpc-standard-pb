@@ -4,7 +4,7 @@ syntax = "proto3";
 package go_wallet_infra_svr;
 
 // 注意：这里 go_package 指定的是协议生成文件 pb.go 在 git 上的地址
-option go_package = "github.com/grpc-standard-pb/go_wallet_infra_svr";
+option go_package = "github.com/ZuoFuhong/grpc-standard-pb/go_wallet_infra_svr";
 
 message CreateWalletReq {
 }
