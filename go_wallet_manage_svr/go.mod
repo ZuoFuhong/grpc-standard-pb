@@ -1,4 +1,4 @@
-module github.com/ZuoFuhong/grpc-standard-pb/go_wallet_infra_svr
+module github.com/ZuoFuhong/grpc-standard-pb/go_wallet_manage_svr
 
 go 1.18
 

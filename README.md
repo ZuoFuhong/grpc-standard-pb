@@ -13,12 +13,12 @@ rpc cmd、参数采用驼峰模式，message 内部的字段采用蛇形命名�
 **2. 编译命令**
 
 ```shell
-protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative go_wallet_infra_svr.proto
+protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=require_unimplemented_servers=false --go-grpc_opt=paths=source_relative go_wallet_manage_svr.proto
 ```
 
 **3. 模块初始化**
 
 ```shell
-go mod init github.com/grpc-standard-pb/go_wallet_infra_svr
+go mod init github.com/grpc-standard-pb/go_wallet_manage_svr
 go get -u google.golang.org/grpc
 ```
