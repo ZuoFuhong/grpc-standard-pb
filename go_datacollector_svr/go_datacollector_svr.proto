@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+// package 格式为服务进程名
+package go_datacollector_svr;
+
+// 注意：这里 go_package 指定的是协议生成文件 pb.go 在 git 上的地址
+option go_package = "github.com/ZuoFuhong/grpc-standard-pb/go_datacollector_svr";
+
+message ReportTraceReq {
+    string trace_id = 1; // 全链路ID
+    string cmd = 2; // 命令字
+    string project = 4; // 被调方
+    string source = 5; // 调用方
+    string server_ip = 6; // 服务器IP
+    int64  errcode = 7; // 错误码
+    string errmsg = 8; // 异常消息
+    int64  timestamp = 9; // 时间戳
+    int64  timecost = 10; // 耗时，单位：ms
+    string reqbody = 11; // 请求参数
+    int64  span_id = 12; // SpanID
+    int64  patent_span_id = 13; // 父 SpanID
+}
+
+message ReportTraceRsp {
+}
+
+service go_datacollector_svr {
+
+    // 上报链路数据
+    rpc ReportTrace(ReportTraceReq) returns (ReportTraceRsp);
+}
