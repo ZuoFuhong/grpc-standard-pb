@@ -19,7 +19,7 @@ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=r
 **3. 模块初始化**
 
 ```shell
-go mod init github.com/grpc-standard-pb/go_wallet_manage_svr
+go mod init github.com/ZuoFuhong/grpc-standard-pb/go_wallet_manage_svr
 go get -u google.golang.org/grpc
 ```
 
