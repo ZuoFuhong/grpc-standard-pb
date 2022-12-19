@@ -22,3 +22,7 @@ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=r
 go mod init github.com/grpc-standard-pb/go_wallet_manage_svr
 go get -u google.golang.org/grpc
 ```
+
+## License
+
+This project is licensed under the [Apache 2.0 license](https://github.com/ZuoFuhong/grpc-standard-pb/blob/master/LICENSE).
