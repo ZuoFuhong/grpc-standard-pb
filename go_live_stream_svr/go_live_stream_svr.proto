@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+// package 格式为服务进程名
+package go_live_stream_svr;
+
+// 注意：这里 go_package 指定的是协议生成文件 pb.go 在 git 上的地址
+option go_package = "github.com/ZuoFuhong/grpc-standard-pb/go_live_stream_svr";
+
+message StartLiveTaskReq {
+    string task_id   = 1;
+    string file_path = 2;
+    string rtmp_url  = 3;
+}
+
+message StartLiveTaskRsp {
+    int32  code = 1;
+    string msg  = 2;
+}
+
+message UpdateLiveTaskReq {
+    string task_id   = 1;
+    string file_path = 2;
+    string rtmp_url  = 3;
+}
+
+message UpdateLiveTaskRsp {
+    int32  code = 1;
+    string msg  = 2;
+}
+
+
+service go_live_stream_svr {
+
+    rpc StartLiveTask (StartLiveTaskReq) returns (StartLiveTaskRsp);
+
+    rpc UpdateLiveTask (UpdateLiveTaskReq) returns (UpdateLiveTaskRsp);
+}
